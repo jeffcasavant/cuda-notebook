@@ -1,7 +1,9 @@
 google-cloud-storage
 numpy
-regex
 pyyaml
+regex
 tensorflow
-tensorflow-gpu
 tensorflow-cpu
+tensorflow-gpu
+torch
+torchvision
