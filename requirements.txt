@@ -1,0 +1,7 @@
+google-cloud-storage
+numpy
+regex
+pyyaml
+tensorflow
+tensorflow-gpu
+tensorflow-cpu
