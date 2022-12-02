@@ -1,5 +1,3 @@
-all:
-
 build:
 	docker build . -t jeffcasavant/cuda-notebook
 
