@@ -6,14 +6,15 @@ RUN apt-get update \
 RUN apt-get update && apt-get install -y --no-install-recommends \
 gnupg2 curl ca-certificates gcc git libc6 libc6-dev && \
     curl -fsSL https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub | apt-key add - && \
+    curl -fsSL https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/7fa2af80.pub | apt-key add - && \
     echo "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list && \
     echo "deb https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/nvidia-ml.list && \
     apt-get purge --autoremove -y curl && \
 rm -rf /var/lib/apt/lists/*
 
-ENV CUDA_VERSION 10.2.89
+ENV CUDA_VERSION 11.8.89
 
-ENV CUDA_PKG_VERSION 10-2=$CUDA_VERSION-1
+ENV CUDA_PKG_VERSION 11-8=$CUDA_VERSION-1
 
 # For libraries in the cuda-compat-* package: https://docs.nvidia.com/cuda/eula/index.html#attachment-a
 RUN apt-get update && apt-get install -y --no-install-recommends \
