@@ -7,3 +7,4 @@ tensorflow-cpu
 tensorflow-gpu
 torch
 torchvision
+cudatoolkit
