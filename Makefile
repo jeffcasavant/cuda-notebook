@@ -1,2 +1,2 @@
 all:
-	docker build . -t jupyter/git-notebook
+	docker build . -t jeffcasavant/cuda-notebook
